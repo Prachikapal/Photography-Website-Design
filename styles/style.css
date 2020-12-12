@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* COMMON */
+
+#fullpage {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 19%;
+}
+
+.section {
+  width: 100vw;
+  height: 80vh;
+}
+
+/* NAVBAR */
+#navbar {
+  box-shadow: 0px 4px 12px rgba(128, 128, 128, 0.568);
+  position: fixed;
+  top: 0%;
+  z-index: 1;
+  background-color: white;
+  width: 100vw;
+}
+
+#nav-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#nav-item li {
+  list-style: none;
+}
+
+#nav-item li a {
+  font-size: 23px;
+  text-decoration: none;
+  color: black;
+}
+
+#nav-item li a:hover {
+  text-decoration: underline;
+}
+
+/* HOME , TRAVEL , WILDLIFE */
+
+#home {
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 40px;
+  grid-row-gap: 10px;
+  box-sizing: border-box;
+  padding: 0px 50px 0px;
+}
+
+#home div {
+  position: relative;
+}
+
+#home > div > img {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  box-shadow: 0px 0px 5px rgb(104, 102, 102);
+}
+#home > div > p {
+  position: absolute;
+  height: 20%;
+  bottom: 0%;
+  font-size: 14px;
+  width: 100%;
+  font-family: "Satisfy", cursive;
+}
+
+.pic1 {
+  grid-row: 1/3;
+}
+
+.pic2 {
+  grid-row: 1/2;
+}
+
+.pic3 {
+  grid-row: 2/4;
+}
+
+/* PARTY */
+.grid {
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 13px;
+  padding: 3% 8%;
+}
+
+.image {
+  position: relative;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.image:hover img {
+  opacity: 0.7;
+}
+
+.image:hover button {
+  display: block;
+}
+
+.image > button {
+  position: absolute;
+  top: 40%;
+  left: 32%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  display: none;
+  box-shadow: 0px 0px 5px #031b3f;
+  border-radius: 5px;
+  outline-color: #063274;
+}
+
+.image > button:hover {
+  cursor: pointer;
+}
+
+.fullImage {
+  position: fixed;
+  top: 25%;
+  left: 28%;
+  width: 520px;
+  height: 330px;
+  z-index: 2;
+  background-color: black;
+  box-shadow: 0px 0px 6px 1px rgb(78, 78, 78);
+  animation: show 0.8s linear;
+}
+
+@keyframes show {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+  25% {
+    height: 80px;
+    width: 130px;
+  }
+  50% {
+    height: 160px;
+    width: 260px;
+  }
+  75% {
+    height: 240px;
+    width: 390px;
+  }
+  100% {
+    height: 330px;
+    width: 520px;
+  }
+}
+
+.fullImage > img {
+  width: 100%;
+  height: 100%;
+}
+
+.fullImage > button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.fullImage > button:hover {
+  cursor: pointer;
+}
+
+.closeImage {
+  animation: close 0.8s linear;
+  height: 0px;
+  width: 0px;
+}
+
+@keyframes close {
+  0% {
+    height: 330px;
+    width: 520px;
+  }
+  25% {
+    height: 240px;
+    width: 390px;
+  }
+  50% {
+    height: 160px;
+    width: 260px;
+  }
+  75% {
+    height: 80px;
+    width: 130px;
+  }
+  100% {
+    height: 0px;
+    width: 0px;
+  }
+}
+
+/* ABOUT */
+
+#about {
+  position: relative;
+}
+
+#about h1 {
+  margin-left: 70%;
+  margin-top: 2%;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-us img {
+  margin-left: 1%;
+  height: 40%;
+  width: 40%;
+  border-radius: 70%;
+}
+
+.social-logo {
+  font-size: 23px;
+}
+
+.social-logo i {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.social-logo i:hover {
+  cursor: pointer;
+  color: rgb(92, 91, 91);
+}
+
+.about-us p {
+  width: 40%;
+  margin-right: 5%;
+  text-align: justify;
+}
+
+.signature {
+  position: absolute;
+  bottom: -4%;
+  right:17%;
+  width: 37%;
+  height: 37%;
+}
+
+.signature > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 100px 0px 20px;
+}
+
+#contact img {
+  height: 80%;
+  width: 50%;
+  box-shadow: 0px 0px 5px 2px rgb(77, 76, 76);
+  border-radius: 5px;
+}
+
+#contact img:hover {
+  filter: grayscale();
+}
+
+#contact div {
+  font-family: "Satisfy", cursive;
+  font-size: 23px;
+  text-align: center;
+}
+
+#contact h2 {
+  text-align: center;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1039px) {
+  .grid {
+    padding: 6% 2%;
+  }
+}
+
+@media screen and (max-width: 839px) {
+  .grid {
+    padding: 7% 1%;
+  }
+  #contact {
+    padding: 0px 50px 0px 20px;
+  }
+  .signature{
+    bottom: -10%;
+  }
+}
+
+@media screen and (max-width: 742px) {
+  .grid {
+    padding: 10% 1%;
+  }
+
+  .fullImage {
+    left: 17%;
+  }
+
+  .image > button {
+    left: 24%;
+  }
+  #contact {
+    padding: 0px 20px 0px 20px;
+  }
+  .about-us p {
+    width: 40%;
+    margin-right: 5%;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width:700px) {
+  #home{
+    padding: 0px 1%;
+    grid-column-gap: 10px;
+    grid-row-gap: 1px;
+  }
+
+  #nav-item li a {
+    font-size: 19px;
+  }
+
+  .fullImage{
+    width: 420px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  #nav-item img{
+    height:10;
+    width:170px;
+  }
+  #nav-item li a {
+    font-size: 15px;
+  }
+  .about-us p {
+    font-size: 13px;
+  }
+  #about h1 {
+    margin-left: 65%;
+    margin-top: 2%;
+  }
+  .signature {
+    bottom: -10%;
+    right:11%;
+    width: 34%;
+    height: 34%;
+  }
+  #about h1{
+    font-size: 22px;
+    margin-left: 70%;
+  }
+  .fullImage{
+    width: 220px;
+    height: 130px;
+  }
+}
+
+@media screen and (max-width:434px){
+  #nav-item img{
+    height:70px;
+    width:130px;
+  }
+  #nav-item li a {
+    font-size: 13px;
+  }
+  .about-us p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width:368px){
+  #nav-item ul li img{
+    /* height:70px;
+    width:120px; */
+    display: block;
+  }
+  /* #nav-item li a {
+    font-size: 13px;
+  } */
+}
+
